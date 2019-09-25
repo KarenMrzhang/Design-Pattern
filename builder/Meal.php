@@ -3,6 +3,7 @@
  * Author: zhangkailang
  * Date: 2019/9/24 0024
  */
+
 class Meal{
 
     private $items = [];
@@ -21,9 +22,9 @@ class Meal{
 
     public function showItems(){
     foreach ($this->items as $item) {
-        echo "Item : "+$item->name();
-        echo ", Packing : "+$item->packing()->pack();
-        echo ", Price : "+$item->price();
+        echo "Item : " . $item->name();
+        echo ", Packing : " . $item->packing()->pack();
+        echo ", Price : " . $item->price() . "\n";
     }
     }
 }

@@ -1,9 +1,12 @@
 <?php
-namespace builderpattern;
+require_once './Meal.php';
+require_once './Item.php';
+
 /**
  * Author: zhangkailang
  * Date: 2019/9/24 0024
  */
+
 class MealBuilder{
 
     public function prepareVegMeal(){
