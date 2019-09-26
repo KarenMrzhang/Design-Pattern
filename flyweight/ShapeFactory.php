@@ -10,11 +10,11 @@ class ShapeFactory{
     private static $circleMap = [];
 
     public static function getCircle($color){
-        $circle = self::$circleMap[$color];
+        $circle = array_key_exists($color,self::$circleMap) ? self::$circleMap[$color] : null;
         if (empty($circle)){
-            $circle = new Circle();
+            $circle = new Circle($color);
             self::$circleMap[$color] = $circle;
-            echo "Create circle of color : " . $color;
+            echo "Create circle of color : " . $color . "\n";
         }
         return $circle;
     }

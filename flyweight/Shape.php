@@ -27,7 +27,7 @@ class Circle implements Shape{
     {
         // TODO: Implement draw() method.
         echo "Circle: Draw() [Color : " . $this->color
-            . ", x : " . $this->x .", y :" . $this->y .", radius :" . $this->radius . " ]";
+            . ", x : " . $this->x .", y :" . $this->y .", radius :" . $this->radius . " ]" . "\n";
     }
 
     /**

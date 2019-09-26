@@ -6,7 +6,7 @@ require_once "./ShapeFactory.php";
  * Time: 22:43
  */
 for ($i = 0;$i < 20;$i++){
-    $circle = ShapeFactory::getCircle(getRandomColor);
+    $circle = ShapeFactory::getCircle(getRandomColor());
     $circle->setX(getRandomX());
     $circle->setY(getRandomY());
     $circle->setRadius(100);
@@ -17,7 +17,7 @@ function getRandomColor(){
     $color = [
         "Red", "Green", "Blue", "White", "Black"
     ];
-    return $color[rand(0,count($color))];
+    return $color[rand(0,count($color) - 1)];
 }
 
 function getRandomX(){
