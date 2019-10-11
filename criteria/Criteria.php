@@ -43,7 +43,7 @@ class CriteriaSingle implements Criteria {
         // TODO: Implement meetCriteria() method.
         $singlePersons = array();
         foreach ($persons as $person){
-            if (strcmp(strtoupper($person->getGender()),'SINGLE') == 0){
+            if (strcmp(strtoupper($person->getMaritalStatus()),'SINGLE') == 0){
                 $singlePersons[] = $person;
             }
         }
