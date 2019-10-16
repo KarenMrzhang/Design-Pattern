@@ -61,7 +61,7 @@ class RedShapeDecorator extends ShapeDecorator{
      */
     public function draw()
     {
-        $this->decoratedShape()->draw();
+        $this->decoratedShape->draw();
         $this->setRedBorder($this->decoratedShape);
     }
 
