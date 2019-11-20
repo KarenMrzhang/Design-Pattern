@@ -3,9 +3,10 @@
  * Author: Karen
  * Date: 2019/9/26 0026
  */
-interface AdvancedMediaPlayer {
+interface AdvancedMediaPlayer
+{
     public function playVlc($fileName);
-   public function playMp4($fileName);
+    public function playMp4($fileName);
 }
 
 class VlcPlayer implements AdvancedMediaPlayer
@@ -15,10 +16,10 @@ class VlcPlayer implements AdvancedMediaPlayer
         echo "Playing vlc file. Name: " . $fileName . "\n";
     }
 
-   public function playMp4($fileName)
-   {
-       //什么也不做
-   }
+    public function playMp4($fileName)
+    {
+        //什么也不做
+    }
 }
 
 class Mp4Player implements AdvancedMediaPlayer

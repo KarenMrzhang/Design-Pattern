@@ -4,18 +4,21 @@ require_once './DrawAPI.php';
  * Author: Karen
  * Date: 2019/10/9 0009
  */
-abstract class Shape {
+abstract class Shape
+{
     protected $drawAPI;
-    protected function Shape($drawAPI){
-      $this->drawAPI = $drawAPI;
+    protected function Shape($drawAPI)
+    {
+        $this->drawAPI = $drawAPI;
     }
-    public abstract function draw();
+    abstract public function draw();
 }
 
-class Circle extends Shape{
+class Circle extends Shape
+{
     private $x, $y, $radius;
 
-    public function __construct ($x, $y, $radius, $drawAPI)
+    public function __construct($x, $y, $radius, $drawAPI)
     {
         parent::__construct($drawAPI);
         $this->x = $x;
@@ -23,9 +26,9 @@ class Circle extends Shape{
         $this->radius = $radius;
     }
 
-    public function draw ()
+    public function draw()
     {
         // TODO: Implement draw() method.
-        $this->drawAPI->drawCircle($this->x,$this->y,$this->radius);
+        $this->drawAPI->drawCircle($this->x, $this->y, $this->radius);
     }
 }

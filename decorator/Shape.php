@@ -4,11 +4,13 @@
  * Date: 2019/10/15
  * Time: 23:17
  */
-interface Shape {
+interface Shape
+{
     public function draw();
 }
 
-class Rectangle implements Shape{
+class Rectangle implements Shape
+{
     public function draw()
     {
         // TODO: Implement draw() method.
@@ -16,7 +18,8 @@ class Rectangle implements Shape{
     }
 }
 
-class Circle implements Shape{
+class Circle implements Shape
+{
     public function draw()
     {
         // TODO: Implement draw() method.
@@ -24,7 +27,8 @@ class Circle implements Shape{
     }
 }
 
-abstract class ShapeDecorator implements Shape{
+abstract class ShapeDecorator implements Shape
+{
     protected $decoratedShape;
 
     /**
@@ -36,9 +40,6 @@ abstract class ShapeDecorator implements Shape{
         $this->decoratedShape = $decoratedShape;
     }
 
-    /**
-     * @return mixed
-     */
     public function draw()
     {
         // TODO: Implement draw() method.
@@ -46,7 +47,8 @@ abstract class ShapeDecorator implements Shape{
     }
 }
 
-class RedShapeDecorator extends ShapeDecorator{
+class RedShapeDecorator extends ShapeDecorator
+{
     /**
      * RedShapeDecorator constructor.
      * @param $decoratedShape
@@ -65,7 +67,8 @@ class RedShapeDecorator extends ShapeDecorator{
         $this->setRedBorder($this->decoratedShape);
     }
 
-    private function setRedBorder($decoratedShape){
+    private function setRedBorder($decoratedShape)
+    {
         echo "Border Color: Red";
     }
 }
