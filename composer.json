@@ -1,13 +1,19 @@
 {
   "name": "design-pattern/design-pattern",
+  "description": "design pattern",
+  "keywords": ["design", "pattern", "php"],
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "vendor\\": "app/"
     }
   },
+  "require": {
+    "php": ">=5.4.0"
+  },
   "repositories": [
     {
-      "type": "vcs",
+      "type": "composer",
       "url": "https://github.com/KarenMrzhang/Design-Pattern"
     }
   ]
