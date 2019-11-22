@@ -1,0 +1,14 @@
+{
+  "name": "design-pattern/design-pattern",
+  "autoload": {
+    "psr-4": {
+      "vendor\\": "app/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://github.com/KarenMrzhang/Design-Pattern"
+    }
+  ],
+}
