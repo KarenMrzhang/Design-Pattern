@@ -3,11 +3,6 @@
   "description": "design pattern",
   "keywords": ["design", "pattern", "php"],
   "license": "MIT",
-  "autoload": {
-    "psr-4": {
-      "vendor\\": "app/"
-    }
-  },
   "require": {
     "php": ">=5.4.0"
   },
