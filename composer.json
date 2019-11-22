@@ -7,7 +7,7 @@
   },
   "repositories": [
     {
-      "type": "composer",
+      "type": "vcs",
       "url": "https://github.com/KarenMrzhang/Design-Pattern"
     }
   ]
