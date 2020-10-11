@@ -4,7 +4,8 @@
  * Date: 2019/11/2
  * Time: 12:46
  */
-class Subject {
+class Subject
+{
     private $observers;
     private $state;
 
@@ -32,8 +33,7 @@ class Subject {
 
     public function notifyAllObservers()
     {
-        foreach ($this->observers as $observer)
-        {
+        foreach ($this->observers as $observer) {
             $observer->update();
         }
     }

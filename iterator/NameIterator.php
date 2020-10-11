@@ -3,7 +3,8 @@
  * Author: Karen
  * Date: 2019/10/21
  */
-class NameIterator implements Iterator{
+class NameIterator implements Iterator
+{
     private $index;
     private $names;
 
@@ -15,7 +16,7 @@ class NameIterator implements Iterator{
 
     public function hasNext()
     {
-        if ($this->index < count($this->names)){
+        if ($this->index < count($this->names)) {
             return true;
         }
         return false;
@@ -23,7 +24,7 @@ class NameIterator implements Iterator{
 
     public function next()
     {
-        if ($this->hasNext()){
+        if ($this->hasNext()) {
             return $this->names[$this->index++];
         }
         return null;
@@ -50,11 +51,13 @@ class NameIterator implements Iterator{
     }
 }
 
-interface Container {
+interface Container
+{
     public function getIterator();
 }
 
-class NameRepository implements Container{
+class NameRepository implements Container
+{
     public $names = ["Robert" , "John" ,"Julie" , "Lora"];
 
     public function getIterator()

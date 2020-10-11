@@ -4,7 +4,8 @@
  * Date: 2019/9/25
  * Time: 22:24
  */
-interface Shape{
+interface Shape
+{
     public function draw();
 }
 
@@ -12,7 +13,8 @@ interface Shape{
  * Class Circle
  * 创建实现接口的实体类。
  */
-class Circle implements Shape{
+class Circle implements Shape
+{
     private $color;
     private $x;
     private $y;

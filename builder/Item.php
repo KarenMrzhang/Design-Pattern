@@ -5,7 +5,8 @@ require_once './Packing.php';
  * Date: 2019/9/24 0024
  */
 
-interface Item{
+interface Item
+{
     public function name();
 
     public function packing();
@@ -13,14 +14,16 @@ interface Item{
     public function price();
 }
 
-abstract class Burger implements Item{
+abstract class Burger implements Item
+{
     public function packing()
     {
         return new Wrapper();
     }
 }
 
-class VegBurger extends Burger{
+class VegBurger extends Burger
+{
     public function price()
     {
         return 25.0;
@@ -32,7 +35,8 @@ class VegBurger extends Burger{
     }
 }
 
-class ChickenBurger extends Burger{
+class ChickenBurger extends Burger
+{
     public function price()
     {
         return 50.5;
@@ -44,14 +48,16 @@ class ChickenBurger extends Burger{
     }
 }
 
-abstract class ColdDrink implements Item{
+abstract class ColdDrink implements Item
+{
     public function packing()
     {
         return new Bottle();
     }
 }
 
-class Coke extends ColdDrink {
+class Coke extends ColdDrink
+{
     public function price()
     {
         return 30.0;
@@ -63,7 +69,8 @@ class Coke extends ColdDrink {
     }
 }
 
-class Pepsi extends ColdDrink{
+class Pepsi extends ColdDrink
+{
     public function price()
     {
         return 35.0;

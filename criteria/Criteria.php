@@ -9,13 +9,14 @@ interface Criteria
     public function meetCriteria($persons);
 }
 
-class CriteriaMale implements Criteria {
-    public function meetCriteria ($persons)
+class CriteriaMale implements Criteria
+{
+    public function meetCriteria($persons)
     {
         // TODO: Implement meetCriteria() method.
         $malePersons = array();
-        foreach ($persons as $person){
-            if (strcmp(strtoupper($person->getGender()),'MALE') == 0){
+        foreach ($persons as $person) {
+            if (strcmp(strtoupper($person->getGender()), 'MALE') == 0) {
                 $malePersons[] = $person;
             }
         }
@@ -23,13 +24,14 @@ class CriteriaMale implements Criteria {
     }
 }
 
-class CriteriaFeMale implements Criteria {
-    public function meetCriteria ($persons)
+class CriteriaFeMale implements Criteria
+{
+    public function meetCriteria($persons)
     {
         // TODO: Implement meetCriteria() method.
         $femalePersons = array();
-        foreach ($persons as $person){
-            if (strcmp(strtoupper($person->getGender()),'FEMALE') == 0){
+        foreach ($persons as $person) {
+            if (strcmp(strtoupper($person->getGender()), 'FEMALE') == 0) {
                 $femalePersons[] = $person;
             }
         }
@@ -37,13 +39,14 @@ class CriteriaFeMale implements Criteria {
     }
 }
 
-class CriteriaSingle implements Criteria {
-    public function meetCriteria ($persons)
+class CriteriaSingle implements Criteria
+{
+    public function meetCriteria($persons)
     {
         // TODO: Implement meetCriteria() method.
         $singlePersons = array();
-        foreach ($persons as $person){
-            if (strcmp(strtoupper($person->getMaritalStatus()),'SINGLE') == 0){
+        foreach ($persons as $person) {
+            if (strcmp(strtoupper($person->getMaritalStatus()), 'SINGLE') == 0) {
                 $singlePersons[] = $person;
             }
         }
@@ -51,17 +54,18 @@ class CriteriaSingle implements Criteria {
     }
 }
 
-class CriteriaAnd implements Criteria {
+class CriteriaAnd implements Criteria
+{
     private $criteria;
     private $otherCriteria;
 
-    public function __construct ($criteria, $otherCriteria)
+    public function __construct($criteria, $otherCriteria)
     {
         $this->criteria = $criteria;
         $this->otherCriteria = $otherCriteria;
     }
 
-    public function meetCriteria ($persons)
+    public function meetCriteria($persons)
     {
         // TODO: Implement meetCriteria() method.
         $firstCriteriaPersons = $this->criteria->meetCriteria($persons);
@@ -69,23 +73,24 @@ class CriteriaAnd implements Criteria {
     }
 }
 
-class CriteriaOr implements Criteria {
+class CriteriaOr implements Criteria
+{
     private $criteria;
     private $otherCriteria;
 
-    public function __construct ($criteria, $otherCriteria)
+    public function __construct($criteria, $otherCriteria)
     {
         $this->criteria = $criteria;
         $this->otherCriteria = $otherCriteria;
     }
 
-    public function meetCriteria ($persons)
+    public function meetCriteria($persons)
     {
         // TODO: Implement meetCriteria() method.
         $firstCriteriaPersons = $this->criteria->meetCriteria($persons);
         $otherCriteriaItems  = $this->otherCriteria->meetCriteria($persons);
         foreach ($otherCriteriaItems as $otherCriteriaItem) {
-            if(!in_array($otherCriteriaItem,$firstCriteriaPersons)){
+            if (!in_array($otherCriteriaItem, $firstCriteriaPersons)) {
                 $firstCriteriaPersons[] = $otherCriteriaItem;
             }
         }

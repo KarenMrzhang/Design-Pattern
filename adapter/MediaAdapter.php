@@ -9,21 +9,21 @@ class MediaAdapter implements MediaPlayer
 {
     private $advancedMusicPlayer;
 
-    public function __construct ($audioType)
+    public function __construct($audioType)
     {
-        if (strcasecmp($audioType ,'vlc') == 0){
+        if (strcasecmp($audioType, 'vlc') == 0) {
             $this->advancedMusicPlayer = new VlcPlayer();
-        }else if(strcasecmp($audioType,'mp4') == 0){
+        } elseif (strcasecmp($audioType, 'mp4') == 0) {
             $this->advancedMusicPlayer = new Mp4Player();
         }
     }
 
-    public function play ($audioType, $fileName)
+    public function play($audioType, $fileName)
     {
         // TODO: Implement play() method.
-        if(strcasecmp($audioType ,'vlc') == 0){
+        if (strcasecmp($audioType, 'vlc') == 0) {
             $this->advancedMusicPlayer->playVlc($fileName);
-        }else if(strcasecmp($audioType ,'mp4') == 0){
+        } elseif (strcasecmp($audioType, 'mp4') == 0) {
             $this->advancedMusicPlayer->playMp4($fileName);
         }
     }

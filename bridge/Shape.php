@@ -16,7 +16,9 @@ abstract class Shape
 
 class Circle extends Shape
 {
-    private $x, $y, $radius;
+    private $x;
+    private $y;
+    private $radius;
 
     public function __construct($x, $y, $radius, $drawAPI)
     {

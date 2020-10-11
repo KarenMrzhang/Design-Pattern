@@ -5,9 +5,9 @@
  */
 abstract class AbstractLogger
 {
-    static $INFO = 1;
-    static $DEBUG = 2;
-    static $ERROR = 3;
+    public static $INFO = 1;
+    public static $DEBUG = 2;
+    public static $ERROR = 3;
     public $level;
 
     //责任链中的下一个元素
@@ -28,7 +28,7 @@ abstract class AbstractLogger
         }
     }
 
-    abstract function write($message);
+    abstract public function write($message);
 }
 
 class ConsoleLogger extends AbstractLogger
@@ -38,7 +38,7 @@ class ConsoleLogger extends AbstractLogger
         $this->level = $level;
     }
 
-    function write($message)
+    public function write($message)
     {
         // TODO: Implement write() method.
         echo "Standard Console::Logger: " . $message . "\n";
@@ -52,7 +52,7 @@ class ErrorLogger extends AbstractLogger
         $this->level = $level;
     }
 
-    function write($message)
+    public function write($message)
     {
         // TODO: Implement write() method.
         echo "Error Console::Logger: " . $message . "\n";
@@ -66,7 +66,7 @@ class FileLogger extends AbstractLogger
         $this->level = $level;
     }
 
-    function write($message)
+    public function write($message)
     {
         // TODO: Implement write() method.
         echo "File::Logger: " . $message . "\n";

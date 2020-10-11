@@ -10,7 +10,7 @@ class Person
     private $gender;
     private $maritalStatus;
 
-    public function __construct ($name, $gender, $maritalStatus)
+    public function __construct($name, $gender, $maritalStatus)
     {
         $this->name = $name;
         $this->gender = $gender;
@@ -20,7 +20,7 @@ class Person
     /**
      * @return mixed
      */
-    public function getName ()
+    public function getName()
     {
         return $this->name;
     }
@@ -28,7 +28,7 @@ class Person
     /**
      * @return mixed
      */
-    public function getGender ()
+    public function getGender()
     {
         return $this->gender;
     }
@@ -36,7 +36,7 @@ class Person
     /**
      * @return mixed
      */
-    public function getMaritalStatus ()
+    public function getMaritalStatus()
     {
         return $this->maritalStatus;
     }

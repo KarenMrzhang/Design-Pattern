@@ -3,7 +3,8 @@
  * Author: Karen
  * Date: 2019/9/26
  */
-interface Shape{
+interface Shape
+{
     public function draw();
 }
 
@@ -11,8 +12,8 @@ interface Shape{
  * Class Circle
  * 创建实现接口的实体类。
  */
-class Circle implements Shape{
-
+class Circle implements Shape
+{
     public function draw()
     {
         // TODO: Implement draw() method.
@@ -24,9 +25,9 @@ class Circle implements Shape{
  * Class Rectangle
  * 创建实现接口的实体类。
  */
-class Rectangle implements Shape{
-
-    public function draw ()
+class Rectangle implements Shape
+{
+    public function draw()
     {
         // TODO: Implement draw() method.
         echo "Rectangle:: Draw()" . "\n";
@@ -37,9 +38,9 @@ class Rectangle implements Shape{
  * Class Square
  * 创建实现接口的实体类。
  */
-class Square implements Shape{
-
-    public function draw ()
+class Square implements Shape
+{
+    public function draw()
     {
         // TODO: Implement draw() method.
         echo "Square:: Draw()" . "\n";

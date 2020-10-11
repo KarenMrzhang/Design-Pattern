@@ -3,26 +3,31 @@
  * Author: zhangkailang
  * Date: 2019/9/25 0025
  */
-abstract class Shape{
+abstract class Shape
+{
     private $id;
     protected $type;
 
-    abstract function draw();
+    abstract public function draw();
 
-    public function getType(){
+    public function getType()
+    {
         return $this->type;
     }
 
-    public function getId(){
+    public function getId()
+    {
         return $this->id;
     }
 
-    public function setId($id){
+    public function setId($id)
+    {
         $this->id = $id;
     }
 }
 
-class Circle extends Shape{
+class Circle extends Shape
+{
     public function __construct()
     {
         $this->type = 'Circle';
@@ -42,7 +47,8 @@ class Circle extends Shape{
     }
 }
 
-class Rectangle extends Shape{
+class Rectangle extends Shape
+{
     public function __construct()
     {
         $this->type = 'Rectangle';
@@ -62,7 +68,8 @@ class Rectangle extends Shape{
     }
 }
 
-class Square extends Shape{
+class Square extends Shape
+{
     public function __construct()
     {
         $this->type = 'Square';

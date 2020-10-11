@@ -8,7 +8,7 @@ require_once "./Subject.php";
 abstract class Observer
 {
     protected $subject;
-    public abstract function update();
+    abstract public function update();
 }
 
 class BinaryObserver extends Observer
